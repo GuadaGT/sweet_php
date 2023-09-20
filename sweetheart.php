@@ -1,12 +1,11 @@
 <?php
-
 class HighSchoolSweetheart
 {
     public function firstLetter(string $name): string
     {
         $sweetheart = trim($name);
         $firstLetter = substr($sweetheart, 0, 1);
-        return $firstLetter;
+        return strtolower($firstLetter);
     }
 
     public function initial(string $name): string
@@ -31,21 +30,20 @@ class HighSchoolSweetheart
         $initials2 = $this->initials($sweetheart_b);
 
         $heart = "
-         ******       ******
-        **      **   **      **
-      **         ** **         **
-     **            *            **
-     **                         **
-     **      $initials1 + $initials2      **
-      **                       **
-        **                   **
-          **               **
-            **           **
-              **       **
-                **   **
-                  ***
-                   *
-            ";
+       ******       ******
+    **      **   **      **
+  **         ** **         **
+ **            *            **
+ **                         **
+ **  $initials1+$initials2  **
+  **                       **
+    **                   **
+      **               **
+        **           **
+          **       **
+            **   **
+              ***
+               *";
         return $heart;
     }
 }
